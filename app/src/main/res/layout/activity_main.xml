@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/landing_background"
+    android:background="@drawable/app_background"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Please enter player name"
+            android:text="Please login"
             android:textColor="#7A8089"
             android:textSize="16sp"
             android:textStyle="bold"/>
@@ -58,18 +58,33 @@
             android:layout_marginTop="2dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:hint="User Name"
             android:textColor="#363A43"
             android:textColorHint="#7A8089"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColor="#363A43"
+                android:textColorHint="#7A8089"/>
+
         </com.google.android.material.textfield.TextInputLayout>
         <Button
             android:id="@+id/btn_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Start"
+            android:text="Submit"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:textAlignment="center"

@@ -1,7 +1,9 @@
 package com.example.quizapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -13,8 +15,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btn_start.setOnClickListener {
+            if(et_user.text.toString().isEmpty()) {
+                Toast.makeText(this,
+                "Please enter user name and password!", Toast.LENGTH_SHORT).show()
+            }else{
+                val intent = Intent(this, QuizQuestionsActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
-//asdasd
-    //asdasdasd
+
+        val questionsList = Constants.getQuestions()
+            Log.i("Questions Size", "${questionsList.size}")
+        }
+
     }
 
